@@ -1,0 +1,109 @@
+#pagina-recorrido p {
+    font-size: 1.25rem;
+}
+
+.lineatiempo {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lineatiempo::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: $color-primario;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.contenedor-timeline {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.contenedor-timeline::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background-color: white;
+    border: 4px solid $color-primario;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.contenedor-timeline--left {
+  left: 0;
+}
+
+.contenedor-timeline--right {
+    left: 50%;
+} 
+
+.contenedor-timeline--left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+
+.contenedor-timeline--right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.contenedor-timeline--right::after {
+  left: -13px;
+}
+
+.contenedor-timeline-inner {
+    padding: 10px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .lineatiempo::after {
+    left: 20px;
+  }
+  .contenedor-timeline {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 15px;
+  }
+  .contenedor-timeline::before {
+    left: 60px;
+    border: medium solid #ca7807;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #ca7807 transparent transparent;
+  }
+  .contenedor-timeline--left::after, .contenedor-timeline--right::after {
+    left: 15px;
+  }
+  .contenedor-timeline--right {
+    left: 0%;
+  }
+}

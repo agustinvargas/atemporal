@@ -1,0 +1,115 @@
+#footer {
+    p {
+        color: $blanco;
+    }
+    h2 {
+        color: $blanco;
+    }
+    h3 {
+        color: $blanco;
+    }
+  
+    
+}
+
+#footer-form {
+    display: inline-flex;
+    padding: 50px 0;
+}
+    
+
+.fondoFooter {
+    background: $color-terciario;
+   }
+ 
+ .gridPie {
+     display: grid;
+     grid-gap: 20px;
+     justify-content:space-between;
+     padding: 0 50px;
+     grid-template-areas:
+     "formularioPie formularioPie formularioPie formularioPie"
+     "col1 col2 col3 col4"
+     "auspiciantes auspiciantes auspiciantes auspiciantes"
+     "creditos creditos creditos creditos";
+ }
+ 
+ 
+ 
+ @media screen and (max-width: 600px) {
+     .gridPie {grid-template-areas:
+     "formularioPie"
+     "col1"
+     "col2"
+     "col3" 
+     "col4"
+     "auspiciantes"
+     "creditos"; 
+     }
+     .gridPie {
+         padding: 0;
+     }
+     #footer h2 {
+         text-align: center;
+     }
+     #footer p {
+         text-align: center;
+     }
+     #footer-form{
+         display: inline-flex;
+         padding: 50px 0;
+     }
+     .auspiciantes ul li {
+         display: block;
+     }
+     .col1, .col2, .col3, .col4 {
+         text-align: center;
+     }
+     ul h4 {
+         padding-left: 0;
+     }
+ }
+ 
+ .formularioPie {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+     width: 100%;
+     height: auto;
+     justify-content: center;
+     align-items: center;
+     grid-area: formularioPie;
+ }
+ 
+ .col1 {
+     grid-area: col1;
+     padding: 5px 0;
+ }
+ .col2 {
+     grid-area: col2;
+     padding: 5px 0;
+ }
+ .col3 {
+     grid-area: col3;
+     padding: 5px 0;
+ }
+ .col4 {
+     grid-area: col4;
+     padding: 5px 0;
+ }
+ 
+ .auspiciantes {
+     grid-area: auspiciantes;
+     padding: 5px 0;
+     text-align: center;
+ }
+ 
+ .auspiciantes ul li {
+     display: inline-block;
+ }
+ 
+ .creditos {
+     grid-area: creditos;
+     padding: 5px 0;
+     text-align: center;
+ }
