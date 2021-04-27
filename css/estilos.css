@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 16px;
   overflow-x: hidden;
 }
@@ -116,18 +115,10 @@ li {
 }
 
 .gran-contenedor--flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contenedor-menu {
@@ -139,14 +130,8 @@ li {
 }
 
 .menu-principal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 5px 30px;
 }
@@ -157,8 +142,6 @@ li {
 }
 
 .menu-principal--flexend {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
@@ -189,13 +172,11 @@ li {
 .contenedor-video__video {
   min-width: 100%;
   min-height: 100%;
-  -o-object-position: -100px -100px;
   object-position: -100px -100px;
 }
 
 @media screen and (max-width: 700px) {
   .contenedor-video__video {
-    -o-object-position: -555px -100px;
     object-position: -555px -100px;
   }
 }
@@ -208,14 +189,9 @@ li {
 
 .contenedor-formulario {
   z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   max-width: 600px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .contenedor-formulario--header {
@@ -277,18 +253,6 @@ li {
   border-bottom: solid 2px white;
 }
 
-.form-items__email::-webkit-input-placeholder {
-  color: white;
-}
-
-.form-items__email:-ms-input-placeholder {
-  color: white;
-}
-
-.form-items__email::-ms-input-placeholder {
-  color: white;
-}
-
 .form-items__email::placeholder {
   color: white;
 }
@@ -347,15 +311,8 @@ button:hover {
 .contenedor-cflex {
   height: inherit;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
 }
@@ -417,25 +374,18 @@ button:hover {
 }
 
 .grilla {
-  display: -ms-grid;
   display: grid;
   grid-column-gap: 55px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-grid-columns: 2fr 3fr;
   grid-template-columns: 2fr 3fr;
-      grid-template-areas: "imagenSanJuan txtComunidad";
+  grid-template-areas: "imagenSanJuan txtComunidad";
 }
 
 @media screen and (max-width: 1200px) {
   .grilla {
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-        grid-template-areas: "imagenSanJuan" "txtComunidad";
+    grid-template-areas: "imagenSanJuan" "txtComunidad";
   }
   .fondoComunidad::before {
     display: none;
@@ -457,7 +407,6 @@ button:hover {
 }
 
 .conImgArtesanos img {
-  -webkit-box-shadow: 7px 7px 14px rgba(5, 5, 5, 0.7);
   box-shadow: 7px 7px 14px rgba(5, 5, 5, 0.7);
   border-radius: 7px;
   padding: 0 40px;
@@ -475,7 +424,6 @@ button:hover {
 }
 
 .conImgArtesanos img {
-  -webkit-box-shadow: 7px 7px 14px rgba(5, 5, 5, 0.7);
   box-shadow: 7px 7px 14px rgba(5, 5, 5, 0.7);
   border-radius: 7px;
 }
@@ -486,16 +434,15 @@ button:hover {
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
   grid-column-gap: 15px;
   grid-row-gap: 10px;
-      grid-template-areas: "intro intro intro" "tarjetaUno tarjetaDos tarjetaTres";
+  grid-template-areas: "intro intro intro" "tarjetaUno tarjetaDos tarjetaTres";
 }
 
 @media screen and (max-width: 800px) {
   .grid {
-        grid-template-areas: "intro" "tarjetaUno" "tarjetaDos" "tarjetaTres";
+    grid-template-areas: "intro" "tarjetaUno" "tarjetaDos" "tarjetaTres";
   }
 }
 
@@ -541,18 +488,14 @@ button:hover {
 }
 
 .tarjetas {
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: all .2s;
   transition: all .2s;
   margin: 20px;
   border-radius: 10px;
 }
 
 .tarjetas:hover {
-  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
 }
 
@@ -617,8 +560,7 @@ button:hover {
 }
 
 .titular-header {
-  -webkit-transform: translate(-50%, 50%) !important;
-          transform: translate(-50%, 50%) !important;
+  transform: translate(-50%, 50%) !important;
 }
 
 .padding-x-1 {
@@ -628,9 +570,7 @@ button:hover {
 
 .navbar {
   z-index: 9999;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  align-items: baseline;
   position: absolute;
   top: 0;
   left: 0;
@@ -647,8 +587,7 @@ button:hover {
 }
 
 .navbar-toggler:focus {
-  -webkit-box-shadow: 0 0 0 0.1rem;
-          box-shadow: 0 0 0 0.1rem;
+  box-shadow: 0 0 0 0.1rem;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -668,8 +607,6 @@ button:hover {
 }
 
 #footer-form {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 50px 0;
 }
@@ -679,19 +616,16 @@ button:hover {
 }
 
 .gridPie {
-  display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 0 50px;
-      grid-template-areas: "formularioPie formularioPie formularioPie formularioPie" "col1 col2 col3 col4" "auspiciantes auspiciantes auspiciantes auspiciantes" "creditos creditos creditos creditos";
+  grid-template-areas: "formularioPie formularioPie formularioPie formularioPie" "col1 col2 col3 col4" "auspiciantes auspiciantes auspiciantes auspiciantes" "creditos creditos creditos creditos";
 }
 
 @media screen and (max-width: 600px) {
   .gridPie {
-        grid-template-areas: "formularioPie" "col1" "col2" "col3"  "col4" "auspiciantes" "creditos";
+    grid-template-areas: "formularioPie" "col1" "col2" "col3"  "col4" "auspiciantes" "creditos";
   }
   .gridPie {
     padding: 0;
@@ -703,8 +637,6 @@ button:hover {
     text-align: center;
   }
   #footer-form {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
     padding: 50px 0;
   }
@@ -720,61 +652,37 @@ button:hover {
 }
 
 .formularioPie {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
   height: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
+  justify-content: center;
+  align-items: center;
   grid-area: formularioPie;
 }
 
 .col1 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: col1;
   padding: 5px 0;
 }
 
 .col2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: col2;
   padding: 5px 0;
 }
 
 .col3 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
   grid-area: col3;
   padding: 5px 0;
 }
 
 .col4 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
   grid-area: col4;
   padding: 5px 0;
 }
 
 .auspiciantes {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-area: auspiciantes;
   padding: 5px 0;
   text-align: center;
@@ -785,9 +693,6 @@ button:hover {
 }
 
 .creditos {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-area: creditos;
   padding: 5px 0;
   text-align: center;
@@ -815,8 +720,7 @@ button:hover {
   position: absolute;
   left: 55%;
   top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 
 .form-pagContacto__label {
@@ -859,8 +763,7 @@ button:hover {
     position: absolute;
     left: 50%;
     top: 70%;
-    -webkit-transform: translate(-50%, -30%);
-            transform: translate(-50%, -30%);
+    transform: translate(-50%, -30%);
   }
 }
 
@@ -880,13 +783,11 @@ button:hover {
 }
 
 .subir25 {
-  -webkit-transform: translatey(-25px) !important;
-          transform: translatey(-25px) !important;
+  transform: translatey(-25px) !important;
 }
 
 .bajar25 {
-  -webkit-transform: translatey(25px) !important;
-          transform: translatey(25px) !important;
+  transform: translatey(25px) !important;
 }
 
 .espacio100 {
