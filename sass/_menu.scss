@@ -24,3 +24,54 @@
 .navbar-light .navbar-nav .nav-link {
     color: $blanco;
 }
+
+// Escritorio
+.contenedor-menu {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 35px;
+}
+
+.menu-principal__logo {
+    max-width: 200px;
+    cursor: pointer;
+}
+
+.menu-principal--baseline {
+    align-items: baseline;
+}
+
+.menu__ul {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.menu__list {
+    text-decoration: none;
+    margin: 0;
+}
+
+.menu__item {
+    
+    text-decoration: none;
+    color: $blanco;
+    padding-left: 10px;
+   
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.menu__item:hover {
+    opacity: 0.7;
+    color: inherit;
+}
+

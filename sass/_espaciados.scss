@@ -1,4 +1,26 @@
+//para quitar
 .padding-x-1 {
     padding-left: 25px;
     padding-right: 25px;
 } 
+//definitivos
+// espaciados que se suman a BS
+
+$spacers: (
+    6: $spacer * 4.5,
+    7: $spacer * 6,
+    8: $spacer * 7.5,
+    9: $spacer * 9,
+    10: $spacer * 10.5,
+);
+
+@for $i from 6 through 10 {
+    .py-#{$i} {
+        padding-top: map-get($map: $spacers, $key: $i);
+        padding-bottom: map-get($map: $spacers, $key: $i);
+    }
+    .my-#{$i} {
+        padding-top: map-get($map: $spacers, $key: $i);
+        padding-bottom: map-get($map: $spacers, $key: $i);
+    }
+}

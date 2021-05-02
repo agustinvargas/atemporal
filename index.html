@@ -18,8 +18,9 @@
 </head>
 
 <body>
+    <div class="envoltura-1">
     <header>
-
+        
         <div class="gran-contenedor gran-contenedor--flex">
             <!-- Menu celular/tablet | BS -->
             <nav class="navbar navbar-expand-lg navbar-light padding-x-1 d-lg-none">
@@ -52,23 +53,23 @@
                 <a href="index.html">
                     <img class="menu-principal__logo" src="img\logo-atemporal-blanco.png" alt="logo atemporal coop">
                 </a>
-                <ul class="menu-principal menu-principal--flexend">
+                <ul class="menu__ul">
                     <li class="menu__list"><a class="menu__item" href="index.html">Inicio</a></li>
                     <li class="menu__list"><a class="menu__item" href="comunidad.html">Comunidad</a></li>
                     <li class="menu__list"><a class="menu__item" href="recorrido.html">Recorrido</a></li>
                     <li class="menu__list"><a class="menu__item" href="contacto.html">Contacto</a></li>
                     <li class="menu__list"><a class="menu__item" href="anotate.html"><button
-                                class="button button--menu">Mirá
+                                class="boton boton--menu">Mirá
                                 futuro</button></a></li>
                 </ul>
             </nav>
             <!-- Video de fondo-->
-            <div class="contenedor-video">
-                <video class="contenedor-video__video" src="videos\atemporal fondo web final.mp4" preload autoplay muted
-                    loop type="video/mp4"></video>
+            <div class="contenedor-video-principal">
+                <video class="contenedor-video-principal__video" src="videos\atemporal fondo web final.mp4" autoplay muted
+                    loop type="video/mp4">El video no puede reproducirse en este navegador</video>
             </div>
 
-            <div class="contenedor-video contenedor-video--opacidad"></div>
+            <div class="contenedor-video-principal contenedor-video-principal--opacidad"></div>
         </div>
         <!-- Newsletter principal -->
         <div class="contenedor-formulario contenedor-formulario--header">
@@ -76,16 +77,17 @@
             <p class="contenedor-formulario__p">Anotate en la próxima campaña de financiamiento colectivo</p>
             <form class="form-items" action="">
                 <input class="form-items__email" type="email" placeholder="Mi correo">
-                <input class="form-items__submit" type="submit" value="Me anoto">
+                <input class="boton boton--formulario-header" type="submit" value="Me anoto">
             </form>
         </div>
 
     </header>
     <!-- INICIO SECCION INSTITUCIONAL -->
     <section>
-        <div class="contenedor-800">
-            <h2 class="contenedor-800__h2">Generamos oportunidades</h2>
-            <p class="contenedor-800__p">Desde el corazón de las comunidades, creamos una empresa cooperativa de
+       
+        <div class="contenedor-2 py-8">
+            <h2 class="contenedor-2__h2">Generamos oportunidades</h2>
+            <p class="contenedor-2__p contenedor-2__p--grande">Desde el corazón de las comunidades, creamos una empresa cooperativa de
                 elaboración de lentes de madera con el propósito de que las personas creen un proyecto de vida a largo
                 plazo a través del trabajo, teniendo como base los valores de inclusión, igualdad y transparencia.
 
@@ -93,8 +95,8 @@
         </div>
         <div class="img-fondo img-fondo--institucional">
             <!-- Imagen de fondo -->
-            <div class="contenedor-cflex contenedor-800 contenedor-800--sp">
-                <p class="institucional-contenido__p text-white">En cada etapa de la cadena de valor trabajan artesanas y
+            <div class="flex-column flex-column--center contenedor-2">
+                <p class="contenedor-2__p text-white">En cada etapa de la cadena de valor trabajan artesanas y
                     artesanos rurales y egresados de escuelas técnicas locales, quienes forman parte del modelo de
                     negocios de nuestra cooperativa tanto en la toma de decisiones de la empresa como en la distribución
                     equitativa de los beneficios por el anteojo que nos comprás.
@@ -102,7 +104,7 @@
 
 
                 </p>
-                <a href="recorrido.html"><button class="institucional-contenido__btn">Conocé más</button></a>
+                <a href="recorrido.html"><button class="boton">Conocé</button></a>
             </div>
         </div>
         <div class="yt-contenedor-full">
@@ -139,7 +141,7 @@
                             de oportunidades tras el cierre de la histórica fábrica La forestal.
 
                         </p>
-                        <a href="comunidad.html"><button>Descubrí</button></a>
+                        <a href="comunidad.html"><button class="boton">Descubrí</button></a>
                     </div>
                 </div>
             </div>
@@ -209,7 +211,7 @@
         </div>
     </section>
     <!-- INICIO DE SECCIÓN: ATEMPORAL EN LOS MEDIOS  -->
-    <div class="p-5"></div>
+    <div class="py-6"></div>
     <section class="fondoPrensa">
         <div class="d-flex flex-column justify-content-center contenedorPrensa">
             <div id="carouselPrensa" class="carousel slide" data-bs-ride="carousel">
@@ -217,7 +219,7 @@
                 <div id="carouselPrensa" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="5000">
-                            <img src="img\logo-lacapital.png" class="d-block w-100" alt="logo la capital">
+                            <img src="img\logo-lacapital.png" class="d-block img-fluid imgPrensa" alt="logo la capital">
                             <p class="text-white"><i>En la provincia de Santa Fe se está desarrollando un ecosistema
                                     abierto en el que se
                                     encuentran universidades, institutos tecnológicos y organizaciones de la sociedad
@@ -225,7 +227,7 @@
                                     del norte.</i></p>
                         </div>
                         <div class="carousel-item" data-bs-interval="5000">
-                            <img src="img\logo-redaccion.png" class="d-block w-100" alt="logo red/acción">
+                            <img src="img\logo-redaccion.png" class="d-block img-fluid imgPrensa" alt="logo red/acción">
                             <p class="text-white"><i>En cada etapa de la cadena de valor van a trabajar las artesanas y
                                     los artesanos
                                     rurales y egresados de escuelas técnicas que forman parte del modelo de negocios,
@@ -233,14 +235,16 @@
                                     beneficios por cada producto vendido.</i></p>
                         </div>
                         <div class="carousel-item" data-bs-interval="5000">
-                            <img src="img\logo-agrofy.png" class="d-block w-100" alt="logo agrofy">
-                            <p class="text-white><i>Atemporal Coop es más que una marca de anteojos de madera, es una
+                            <img src="img\logo-agrofy.png" class="d-block img-fluid imgPrensa" alt="logo agrofy">
+                            <p class="text-white"><i>Atemporal Coop es más que una marca de anteojos de madera, es una
                                     empresa social que a
                                     través de una colaboración con artesanos del norte de Santa Fe descubrió una
                                     comunidad con vocación de trabajo colectivo.</i></p>
                         </div>
 
-                        <div class="carousel-indicators">
+
+
+                        <div class="carousel-indicators carousel-indicators--prensa">
                             <button type="button" data-bs-target="#carouselPrensa" data-bs-slide-to="0"
                                 class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselPrensa" data-bs-slide-to="1"
@@ -255,10 +259,10 @@
     </section>
      <!-- INICIO DEL FOOTER  -->
     
-     <footer id="footer" class="fondoFooter text-white p-5">
+     <footer id="footer" class="fondoFooter py-7">
          <div class="gridPie">
              <div class="formularioPie">
-                 <h2 class="text-white">Sumate a nuestra comunidad</h2>
+                 <h2>Sumate a nuestra comunidad</h2>
                  <p>Suscribite para conocer futuras ediciones y obtener beneficios especiales</p>
                  <form action="">
                      <input class="form-items__email" type="email" name="email" required>
@@ -331,6 +335,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
+    </div>
 </body>
 
 </html>
