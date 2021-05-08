@@ -117,6 +117,18 @@ button:hover {
   color: #ca7807;
 }
 
+//fondos
+.fondo-color-primario {
+  background-color: $color-secundario;
+}
+
+//dibujos
+.dibujo {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
 //contenedor-800
 .contenedor-800 {
   max-width: 800px;
@@ -363,7 +375,8 @@ button:hover {
 }
 
 .fondo-comunidad {
-  background-image: url("../img/comunidad.jpg");
+  background: url("../img/comunidad.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .titular-header {

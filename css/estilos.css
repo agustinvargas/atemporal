@@ -122,6 +122,16 @@ button:hover {
   color: #ca7807;
 }
 
+.fondo-color-primario {
+  background-color: #fafafa;
+}
+
+.dibujo {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
 .contenedor-800 {
   max-width: 800px;
   margin: auto;
@@ -348,7 +358,8 @@ button:hover {
 }
 
 .fondo-comunidad {
-  background-image: url("../img/comunidad.jpg");
+  background: url("../img/comunidad.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .titular-header {
@@ -562,8 +573,8 @@ p.modalArtesanos {
 }
 
 .navbar-light .navbar-toggler {
-  color: #fafafa;
-  border-color: #fafafa;
+  color: #fcfcfc;
+  border-color: #fcfcfc;
 }
 
 .navbar-toggler:focus {
@@ -571,7 +582,7 @@ p.modalArtesanos {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #fafafa;
+  color: #fcfcfc;
 }
 
 .contenedor-menu {
@@ -611,7 +622,7 @@ p.modalArtesanos {
 
 .menu__item {
   text-decoration: none;
-  color: #fafafa;
+  color: #fcfcfc;
   padding-left: 20px;
   text-transform: uppercase;
   font-weight: 900;
@@ -720,7 +731,7 @@ p.modalArtesanos {
 
 .form-pagContacto__submit {
   background-color: #ca7807;
-  color: #fafafa;
+  color: #fcfcfc;
   border-radius: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -732,7 +743,7 @@ p.modalArtesanos {
 
 .boton {
   background-color: #ca7807;
-  color: #fafafa;
+  color: #fcfcfc;
   border-radius: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -756,19 +767,19 @@ p.modalArtesanos {
 
 .boton--formulario-header {
   background-color: transparent;
-  color: #fafafa;
+  color: #fcfcfc;
   border-radius: 30px;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   padding: 12px 24px;
   line-height: 1;
-  border: solid 2px #fafafa;
+  border: solid 2px #fcfcfc;
 }
 
 .boton--formulario-header:hover {
   background-color: #ca7807;
-  color: #fafafa;
+  color: #fcfcfc;
   border-radius: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -784,7 +795,7 @@ p.modalArtesanos {
 
 .boton--menu:hover {
   border: solid 1px #261c1c;
-  color: #fafafa;
+  color: #fcfcfc;
   opacity: .7;
 }
 
@@ -804,7 +815,7 @@ p.modalArtesanos {
 }
 
 .fondoFooter {
-  background: #d4d4d4;
+  background: #fafafa;
 }
 
 .gridPie {
@@ -945,7 +956,7 @@ p.modalArtesanos {
 
 .form-pagContacto__submit {
   background-color: #ca7807;
-  color: #fafafa;
+  color: #fcfcfc;
   border-radius: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -1002,7 +1013,7 @@ p.modalArtesanos {
   font-family: "Averia Serif Libre", cursive;
   font-size: 1.25rem;
   font-weight: 900;
-  color: #fafafa;
+  color: #fcfcfc;
   display: block;
   text-align: center;
   transition: opacity 250ms;
@@ -1074,20 +1085,6 @@ p.modalArtesanos {
 .negrita {
   font-weight: 900;
   font-size: inherit;
-}
-
-.contenedor800 {
-  max-width: 800px;
-  margin: auto;
-  padding: 0 25px;
-}
-
-.espacio100 {
-  margin: 100px 0;
-}
-
-.fondo-color-primario {
-  background-color: #ca7807;
 }
 
 .w-150 {
