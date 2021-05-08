@@ -56,18 +56,18 @@
             <a href="index.html">
                 <img class="menu-principal__logo" src="img\logo-atemporal-blanco.png" alt="logo atemporal coop">
             </a>
-            <ul class="menu-principal menu-principal--flexend">
+            <ul class="menu__ul">
                 <li class="menu__list"><a class="menu__item" href="index.html">Inicio</a></li>
                 <li class="menu__list"><a class="menu__item" href="comunidad.html">Comunidad</a></li>
                 <li class="menu__list"><a class="menu__item" href="recorrido.html">Recorrido</a></li>
                 <li class="menu__list"><a class="menu__item" href="contacto.html">Contacto</a></li>
-                <li class="menu__list"><a class="menu__item" href="anotate.html"><button
-                            class="button button--menu">Mirá
+                <li class="menu__list"><a class="menu__item" href="anotate.html"><button class="boton boton--menu">Mirá
                             futuro</button></a></li>
             </ul>
         </nav>
+        <!-- migas de pan -->
         <div class="position-absolute top-50 start-50 titular-header">
-            <h1 class="text-white text-center">Comunidad</h1>
+
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -285,71 +285,67 @@
 
     <!-- INICIO DEL FOOTER  -->
 
-    <footer id="footer" class="fondoFooter text-white p-5">
+    <footer id="footer" class="fondoFooter py-5">
         <div class="gridPie">
-            <div class="formularioPie">
-                <h2 class="text-white">Sumate a nuestra comunidad</h2>
-                <p>Suscribite para conocer futuras ediciones y obtener beneficios especiales</p>
-                <form action="">
+            <div class="form-items form-items--footer">
+                <h2 class="py-4">Sumate a nuestra comunidad</h2>
+                <p>Conocé futuras ediciones y obtené beneficios especiales</p>
+                <form class="py-5 d-flex" action="">
                     <input class="form-items__email" type="email" name="email" required>
-                    <!--Formulario para insertar correo -->
-                    <input class="form-items__submit" type="submit" value="Me anoto"> <!-- Botón de envío correo -->
+                    <!--Formulario newsletter -->
+                    <input class="boton" type="submit" value="Me anoto"> <!-- Botón de envío correo -->
                 </form>
                 <br>
                 <hr width="70%"><br>
             </div>
 
-            <nav class="col1">
+            <nav class="f-col1">
                 <ul>
                     <h4>Nosotros</h4>
+                    <li><a href="anotate.html">Campaña Mirá Futuro</a></li>
                     <li><a href="recorrido.html">Recorrido</a></li>
                     <li><a href="comunidad.html">Comunidad</a></li>
-                    <li><a href="anotate.html">Campaña Mirá Futuro</a></li>
                 </ul>
             </nav>
-            <div class="col2">
-                <ul>
-                    <h4>Blog</h4>
-                    <!-- aún sin linkear -->
-                    <li><a href="">Artículo 1</a></li>
-                    <li><a href="">Artículo 2</a></li>
-                    <li><a href="">Artículo 3</a></li>
-                </ul>
-            </div>
-            <nav class="col3">
+            <div class="f-col2">
                 <ul>
                     <h4>Legal</h4>
                     <li><a href="terminos-y-condiciones.html">Términos y condiciones</a></li>
                     <li><a href="politica-de-privacidad.html">Política de privacidad</a></li>
                     <li><a href="legal-cooperativa.html">Cooperativa</a></li>
                 </ul>
-            </nav>
-            <nav class="col4">
+            </div>
+            <nav class="f-col3">
                 <ul>
-                    <h4>Contacto</h4>
+                    <h4>Redes</h4>
                     <li><a href="https://www.facebook.com/atemporal.coop">Facebook</a></li>
                     <!--Botón de Facebook -->
-                    <li><a href="https://www.instagram.com/atemporal.coop/">Instagram</a></li>
+                    <li><a href="https://www.instagram.com/atemporalcoop/">Instagram</a></li>
                     <!--Botón de Instagram -->
                     <li><a href="https://www.linkedin.com/company/atemporal-coop/">LinkedIn</a></li>
                     <!--Botón de Linkedin -->
-                    <li><a href="mailto:hola@atemporal.ar">Correo electrónico</a></li>
-                    <!--Link a correo -->
-                    <li><a href="https://web.whatsapp.com/send?phone=543415440515&text=">Teléfono</a></li>
+                </ul>
+            </nav>
+            <nav class="f-col4">
+                <ul>
+                    <h4>Contacto</h4>
+                    <li><a href="https://web.whatsapp.com/send?phone=543415440515&text=">3415440515</a></li>
                     <!--Link a WhatsApp -->
-                    <li><a href="">Dirección</li></a>
+                    <li><a href="mailto:atemporal.ar">hola@atemporal.ar</a></li>
+                    <li><a
+                            href="https://www.google.com.ar/maps/place/Paraje+San+Juan/@-28.2271287,-59.5861218,15z/data=!4m5!3m4!1s0x944f4547fc5bcb97:0xd5898505139ff644!8m2!3d-28.2259471!4d-59.5841316">Paraje
+                            San Juan, Santa Fe</li></a>
                     <!--Link a Google Maps -->
                 </ul>
             </nav>
-            <div class="auspiciantes">
+            <div class="f-auspiciantes my-5">
                 <ul>
-                    <h4>Nos apoya</h4>
-                    <li><img class="w-150 img-fluid" src="img\l2.png" alt="La Segunda"></li>
-
+                    <h4>Apoya este sueño</h4>
+                    <li><img class="img-fluid" src="img\l2.png" alt="La Segunda"></li>
                 </ul>
             </div>
-            <div class="creditos">
-                <p class="txtBlanco">2021 Atemporal Coop
+            <div class="f-creditos">
+                <p>2021 Atemporal Coop
                     <br>
                     En trámite, número de expediente XXX XXX XXX
                     <br><span class="my-4 d-block">Sitio elaborado con fines educativos</span>

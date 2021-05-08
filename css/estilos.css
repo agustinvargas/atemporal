@@ -106,7 +106,7 @@ li {
   overflow: hidden;
   z-index: 1;
   background-color: #020101;
-  opacity: 0.5;
+  opacity: 0.1;
   overflow: hidden;
 }
 
@@ -146,6 +146,18 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+.breadcrumb a {
+  color: #fcfcfc;
+}
+
+.breadcrumb a:hover {
+  color: #ca7807;
+}
+
+li.breadcrumb-item.active {
+  color: #fcfcfc;
 }
 
 #fondo-comunidad {
@@ -217,30 +229,30 @@ button:hover {
   border-radius: 7px;
 }
 
-.contenedorGrid {
+.contenedor-grid {
   max-width: 800px;
   margin: auto;
 }
 
-.grid {
+.grid-ods {
   display: grid;
   grid-column-gap: 15px;
   grid-row-gap: 10px;
   grid-template-areas: "intro intro intro" "tarjetaUno tarjetaDos tarjetaTres";
 }
 
-@media screen and (max-width: 800px) {
-  .grid {
+@media screen and (max-width: 750px) {
+  .grid-ods {
     grid-template-areas: "intro" "tarjetaUno" "tarjetaDos" "tarjetaTres";
   }
 }
 
-.grid > div {
+.grid-ods > div {
   text-align: center;
   padding: 25px;
 }
 
-.grid > div img {
+.grid-ods > div img {
   max-width: 150px;
   height: auto;
   display: block;
@@ -809,7 +821,7 @@ p.modalArtesanos {
     border-radius: 6px;
     position: absolute;
     left: 50%;
-    top: 70%;
+    top: 100%;
     transform: translate(-50%, -30%);
   }
 }

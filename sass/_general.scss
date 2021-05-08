@@ -101,7 +101,7 @@ li {
   overflow: hidden;
   z-index: 1;
   background-color: #020101;
-  opacity: 0.5;
+  opacity: 0.1;
   overflow: hidden;
 }
 
@@ -148,6 +148,17 @@ button:hover {
 
   justify-content: center;
   text-align: center;
+}
+
+//migas de pan
+.breadcrumb a {
+  color: $blanco;
+}
+.breadcrumb a:hover {
+  color: $color-primario;
+}
+li.breadcrumb-item.active  {
+  color: $blanco;
 }
 
 //contenedor comunidad
@@ -225,12 +236,12 @@ button:hover {
 
 // contenedor seccion ods
 
-.contenedorGrid {
+.contenedor-grid {
   max-width: 800px;
   margin: auto;
 }
 
-.grid {
+.grid-ods {
   display: grid;
   grid-column-gap: 15px;
   grid-row-gap: 10px;
@@ -239,8 +250,8 @@ button:hover {
     "tarjetaUno tarjetaDos tarjetaTres";
 }
 
-@media screen and (max-width: 800px) {
-  .grid {
+@media screen and (max-width: 750px) {
+  .grid-ods {
     grid-template-areas:
       "intro"
       "tarjetaUno"
@@ -249,12 +260,12 @@ button:hover {
   }
 }
 
-.grid > div {
+.grid-ods > div {
   text-align: center;
   padding: 25px;
 }
 
-.grid > div img {
+.grid-ods > div img {
   max-width: 150px;
   height: auto;
   display: block;
