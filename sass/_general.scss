@@ -62,7 +62,7 @@ h {
 }
 
 a {
-  @include enlaces(white);
+  @include enlaces(black);
 }
 a {
   &:hover {
@@ -74,10 +74,6 @@ a {
 ul {
   padding: 0;
 }
-ul h4 {
-  color: $blanco;
-}
-
 li {
   list-style: none;
 }
@@ -116,21 +112,10 @@ li {
   justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
 button:hover {
   background: transparent;
   color: #ca7807;
 }
-
-
 
 //contenedor-800
 .contenedor-800 {
@@ -139,7 +124,6 @@ button:hover {
   text-align: center;
   padding: 80px 20px;
 }
-
 
 .contenedor-cflex {
   height: inherit;
@@ -154,22 +138,14 @@ button:hover {
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
 //contenedor comunidad
 
-.fondo-comunidad {
+#fondo-comunidad {
   padding: 90px 0;
   position: relative;
 }
 
-.fondo-comunidad:before {
+#fondo-comunidad:before {
   content: " ";
   display: block;
   position: absolute;
@@ -185,41 +161,29 @@ button:hover {
   background-attachment: fixed;
 }
 
-.contenedorGrilla {
+.contenedor-fondo {
   max-width: 1200px;
   margin: auto;
   position: relative;
 }
-.grilla {
-  display: -ms-grid;
+.grilla-fondo {
   display: grid;
   grid-column-gap: 55px;
-
   justify-content: center;
-
   align-items: center;
-
   grid-template-columns: 2fr 3fr;
   grid-template-areas: "imagenSanJuan txtComunidad";
 }
 
 @media screen and (max-width: 1200px) {
-  .grilla {
+  .grilla-fondo {
     grid-template-columns: 1fr;
     grid-template-areas:
       "imagenSanJuan"
       "txtComunidad";
   }
-  .fondoComunidad::before {
-    display: none;
-  }
-  .fondoComunidad {
-    padding: 0;
-    background-color: black;
-    color: white;
-  }
-  #carouselArtesanos {
-    padding-top: 25px;
+  #fondo-comunidad {
+    padding: 65px 0;
   }
 }
 
@@ -237,7 +201,7 @@ button:hover {
   padding: 25px;
 }
 
-.txtComunidad {
+.txt-comunidad {
   grid-area: txtComunidad;
   padding: 50px;
 }
@@ -306,7 +270,7 @@ button:hover {
 }
 
 .tarjetas {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(99, 80, 80, 0.2);
 
   transition: all 0.2s;
   margin: 20px;
@@ -404,4 +368,14 @@ button:hover {
 
 .titular-header {
   transform: translate(-50%, 50%) !important;
+}
+
+// modal
+.modal-content {
+  background-color: transparent;
+  border: 0;
+}
+p.modalArtesanos {
+  text-align: center;
+  cursor: pointer;
 }

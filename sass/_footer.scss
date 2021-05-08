@@ -12,10 +12,6 @@
     
 // }
 
-#footer-form {
-    display: inline-flex;
-    padding: 50px 0;
-}
     
 
 .fondoFooter {
@@ -30,9 +26,9 @@
      padding: 0 50px;
      grid-template-areas:
      "formularioPie formularioPie formularioPie formularioPie"
-     "col1 col2 col3 col4"
-     "auspiciantes auspiciantes auspiciantes auspiciantes"
-     "creditos creditos creditos creditos";
+     "f-col1 f-col2 f-col3 f-col4"
+     "f-auspiciantes f-auspiciantes f-auspiciantes f-auspiciantes"
+     "f-creditos f-creditos f-creditos f-creditos";
  }
  
  
@@ -40,15 +36,15 @@
  @media screen and (max-width: 600px) {
      .gridPie {grid-template-areas:
      "formularioPie"
-     "col1"
-     "col2"
-     "col3" 
-     "col4"
-     "auspiciantes"
-     "creditos"; 
+     "f-col1"
+     "f-col2"
+     "f-col3" 
+     "f-col4"
+     "f-auspiciantes"
+     "f-creditos"; 
      }
      .gridPie {
-         padding: 0;
+         padding: 0 15px;
      }
      #footer h2 {
          text-align: center;
@@ -63,54 +59,68 @@
      .auspiciantes ul li {
          display: block;
      }
-     .col1, .col2, .col3, .col4 {
+     .f-col1, .f-col2, .f-col3, .f-col4 {
          text-align: center;
      }
-     ul h4 {
-         padding-left: 0;
-     }
+     
  }
  
- .formularioPie {
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: column;
-     width: 100%;
-     height: auto;
-     justify-content: center;
-     align-items: center;
-     grid-area: formularioPie;
+ .form-items--footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    grid-area: formularioPie;
+}
+ 
+ .f-col1 {
+     grid-area: f-col1;
+     padding: 5px 0;
+ }
+
+ .f-col__a {
+    color: black !important;
+    text-decoration: none;
+    text-transform: none;
+    overflow: hidden;
+}
+
+.f-col__h4 {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden; 
+}
+
+
+ .f-col2 {
+     grid-area: f-col2;
+     padding: 5px 0;
+ }
+ .f-col3 {
+     grid-area: f-col3;
+     padding: 5px 0;
+ }
+ .f-col4 {
+     grid-area: f-col4;
+     padding: 5px 0;
  }
  
- .col1 {
-     grid-area: col1;
-     padding: 5px 0;
- }
- .col2 {
-     grid-area: col2;
-     padding: 5px 0;
- }
- .col3 {
-     grid-area: col3;
-     padding: 5px 0;
- }
- .col4 {
-     grid-area: col4;
-     padding: 5px 0;
- }
- 
- .auspiciantes {
-     grid-area: auspiciantes;
+ .f-auspiciantes {
+     grid-area: f-auspiciantes;
      padding: 5px 0;
      text-align: center;
  }
  
- .auspiciantes ul li {
+ .f-auspiciantes ul li {
      display: inline-block;
  }
  
- .creditos {
-     grid-area: creditos;
+ .f-creditos {
+     grid-area: f-creditos;
      padding: 5px 0;
      text-align: center;
  }

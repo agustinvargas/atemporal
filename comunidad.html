@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
     <link rel="stylesheet" href="css\estilos.css">
 
 
@@ -77,7 +78,7 @@
     </div>
     <div class="my-5"></div>
 
-    
+
     <div class="my-5"></div>
     <div class="contenedor800">
         <p><span class="negrita">Un tiempo atrás, Atemporal comenzó a buscar los mejores artesanos de la Argentina
@@ -85,7 +86,7 @@
             para realizar una colaboración para una nueva colección. La idea original era que las artesanas y artesanos
             del país realicen
             los estuches de cuero recuperado para los anteojos de sol que realizamos en un pequeño taller.</p>
-        <img class="img-fluid my-5" src="img\comunidad.jpg" alt="">
+        <img class="img-fluid my-5 shadow" src="img\comunidad.jpg" alt="">
         <p>Después de una larga búsqueda acompañados por la Fundación de la Bolsa de Comercio de Rosario <span
                 class="negrita"> llegamos a la
                 comunidad del Paraje San Juan </span>. Ubicada en el extremo norte de la provincia de Santa Fe, varios
@@ -101,20 +102,67 @@
 
 
     </div>
-    <div class="container">
+    <!-- <div class="grid-artesanos">
 
-        <div class="row espacio100">
-            <div class="col animate__animated animate__fadeInLeft">
-                <img class="w-100 " src="img\artesano01v.jpg" alt="">
+        <div class="grid-artesanos__col"><img class="play" src="img/youtube-brands.svg" alt="youtube">
+            <span class="img-comunidad__nombre">Alex</span>
+        </div>
+        <div class="grid-artesanos__col"><img class="play" src="img/youtube-brands.svg" alt="youtube">
+            <span class="img-comunidad__nombre">Alex</span>
+        </div>
+        <div class="grid-artesanos__col"><img class="play" src="img/youtube-brands.svg" alt="youtube">
+            <span class="img-comunidad__nombre">Alex</span>
+        </div>
+
+    </div> -->
+
+
+
+
+    <div class="container py-7">
+
+        <div class="row g-3">
+
+            <div class="col-12 col-lg-4 animate__animated animate__fadeInLeft overflow-hidden">
+                <div class="img-comunidad tarjetas tarjetas--comunidad artesano-1" data-bs-toggle="modal"
+                data-bs-target="#modalArtesanos1">
+                    <img class="play" src="img/youtube-brands.svg" alt="youtube">
+                    <span class="img-comunidad__nombre">Alex</span>
+                </div>
             </div>
-            <div class="col animate__animated animate__slideInUp">
-                <img class="w-100 subir25" src="img\artesano02v.jpg" alt="">
+
+            <div class="col-12 col-lg-4 animate__animated animate__fadeInLeft overflow-hidden">
+                <div class="img-comunidad tarjetas tarjetas--comunidad artesano-2">
+                    <img class="play" src="img/youtube-brands.svg" alt="youtube">
+                    <span class="img-comunidad__nombre">Alex</span>
+                </div>
             </div>
-            <div class="col animate__animated animate__fadeInRight">
-                <img class="w-100 bajar25" src="img\artesano03v.jpg" alt="">
+
+            <div class="col-12 col-lg-4 animate__animated animate__fadeInLeft overflow-hidden">
+                <div class="img-comunidad tarjetas tarjetas--comunidad artesano-3">
+                    <img class="play" src="img/youtube-brands.svg" alt="youtube">
+                    <span class="img-comunidad__nombre">Alex</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="modalArtesanos1" tabindex="-1" aria-labelledby="modaluno" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <iframe width="100%" height="280px" src="https://www.youtube.com/embed/eYKaUdB6u9s"
+                    title="YouTube video player" frameborder="0" allow="picture-in-picture" allowfullscreen>
+                </iframe>
+                <p class="modalArtesanos" data-bs-dismiss="modal">Cerrar</p>
             </div>
         </div>
     </div>
+
+
+
     <div class="contenedor800">
         <p>Los artesanos y técnicos son socios no solo trabajan en el proceso de producción sino que también forman
             parte de la gestión de la empresa cooperativa. </p>
