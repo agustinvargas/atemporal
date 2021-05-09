@@ -1,5 +1,248 @@
 //contenedores
 
+// gran contenedor
+.gran-contenedor {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.gran-contenedor::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #020101;
+    opacity: 0.1;
+    overflow: hidden;
+}
+
+.gran-contenedor--flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedor-cflex {
+    height: inherit;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+//contenedor comunidad
+
+#fondo-comunidad {
+    padding: 90px 0;
+    position: relative;
+}
+
+#fondo-comunidad:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/camino-al-paraje.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contenedor-fondo {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+.grilla-fondo {
+    display: grid;
+    grid-column-gap: 55px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "imagenSanJuan txtComunidad";
+}
+
+@media screen and (max-width: 1200px) {
+    .grilla-fondo {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "imagenSanJuan"
+            "txtComunidad";
+    }
+    #fondo-comunidad {
+        padding: 65px 0;
+    }
+}
+
+.carouselArtesanos {
+    grid-area: imagenSanJuan;
+}
+
+.conImgArtesanos img {
+    box-shadow: 7px 7px 14px rgba(5, 5, 5, 0.7);
+    border-radius: 7px;
+    padding: 0 40px;
+}
+
+.carousel-item .active {
+    padding: 25px;
+}
+
+.txt-comunidad {
+    grid-area: txtComunidad;
+    padding: 50px;
+}
+
+.conImgArtesanos img {
+    box-shadow: 7px 7px 14px rgba(5, 5, 5, 0.7);
+    border-radius: 7px;
+}
+
+// contenedor seccion ods
+
+.contenedor-grid {
+    max-width: 800px;
+    margin: auto;
+}
+
+.grid-ods {
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+    grid-template-areas:
+        "intro intro intro"
+        "tarjetaUno tarjetaDos tarjetaTres";
+}
+
+@media screen and (max-width: 750px) {
+    .grid-ods {
+        grid-template-areas:
+            "intro"
+            "tarjetaUno"
+            "tarjetaDos"
+            "tarjetaTres";
+    }
+}
+
+.grid-ods > div {
+    text-align: center;
+    padding: 25px;
+}
+
+.grid-ods > div img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.intro {
+    grid-area: intro;
+}
+
+.tarjetaUno {
+    grid-area: tarjetaUno;
+}
+
+.tarjetaDos {
+    grid-area: tarjetaDos;
+}
+
+.tarjetaTres {
+    grid-area: tarjetaTres;
+}
+
+.espacioSuperior {
+    padding: 20px 0;
+}
+
+.tarjetas {
+    box-shadow: 0 4px 8px 0 rgba(99, 80, 80, 0.2);
+
+    transition: all 0.2s;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.tarjetas:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+    transform: translateY(-10px);
+}
+
+.tarjetas p {
+    margin-top: 25px;
+    font-size: 75%;
+}
+
+//Prensa
+.fondoPrensa {
+    background-image: url(../img/goma-sanjuan.jpg);
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.contenedorPrensa {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    max-width: 600px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.imgPrensa {
+    max-width: 65%;
+    padding-bottom: 30px;
+    display: inline-flex;
+    margin: auto;
+}
+
+#carouselPrensa.carousel-item {
+    padding: 0 20px;
+    text-align: center;
+    color: white;
+}
+
+#carouselPrensa.carousel-item img {
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto 30px auto;
+}
+
+#carouselPrensa .carousel-item p {
+    padding-bottom: 50px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.carousel-indicators--prensa {
+    bottom: -25px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
 $contenedores: (
     1: $spacer * 40,
     2: $spacer * 50,
@@ -13,19 +256,18 @@ $contenedores: (
         max-width: map-get($map: $contenedores, $key: $i);
         margin-left: auto;
         margin-right: auto;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 
 @media screen and (max-width: 700px) {
     .contenedor-video-principal {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
     }
-  }
-
+}
 
 .flex-column {
     height: inherit;
@@ -51,9 +293,117 @@ $contenedores: (
     width: 100%;
 }
 
+.img-comunidad:hover .img-comunidad__nombre {
+    opacity: 1;
+}
+@for $i from 1 through 6 {
+    .artesano-#{$i} {
+        background: url(../img/artesano0#{$i}v.jpg) no-repeat center center;
+        background-size: cover;
+        padding: 270px 0;
+        position: relative;
+    }
+}
+.play {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 250ms;
+    max-width: 25%;
+}
+.img-comunidad:hover .play {
+    opacity: 0.3;
+}
+
 //envoltura
 .envoltura-1 {
     max-width: 1450px;
     margin: auto;
     position: relative;
+}
+
+
+//elementos
+.img-comunidad__img {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+}
+
+.tarjetas--comunidad:hover {
+    transform: scale(1.01) !important;
+    cursor: pointer;
+}
+.img-comunidad__nombre {
+    opacity: 0;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    font-family: $font-encabezado;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: $blanco;
+    display: block;
+    text-align: center;
+    transition: opacity 250ms;
+}
+.contenedor-2__h2 {
+    text-align: center;
+    margin: inherit auto;
+    padding-bottom: 25px;
+}
+
+
+.contenedor-2__p {
+    text-align: center;
+    margin: inherit auto;
+}
+
+.contenedor-video-principal__video {
+    min-width: 100%;
+    min-height: 100%;
+    object-position: -100px -100px;
+   
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .contenedor-video-principal__video {
+        object-position: -555px -100px;
+    }
+}
+
+.yt-contenedor-full__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+//modificadores
+.contenedor-2__p--grande {
+    font-size: 1.2rem;
+}
+
+.flex-column--center {
+    justify-content: center;
+    text-align: center;
+}
+
+.img-fondo--institucional {
+    background-image: url(../img/fondoinstitucional.jpg);
+}
+
+.contenedor-video-principal--opacidad {
+    background-color: #261c1c;
+    z-index: 0;
+    opacity: 0.5;
 }

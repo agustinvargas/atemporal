@@ -10,6 +10,15 @@
 body {
   font-family: $font-principal;
 }
+body#pagina-anotate p {
+  font-size: 1.25rem;
+}
+body#pagina-comunidad p {
+  font-size: 1.25rem;
+}
+body#pagina-recorrido p {
+  font-size: 1.25rem;
+}
 
 //parrafos
 @mixin parrafos($size, $height) {
@@ -21,8 +30,30 @@ p {
   @include parrafos(1.1rem, 2);
 }
 
-.creditos p {
-  font-size: 1rem !important;
+
+//boton
+.boton {
+  background-color: $color-primario;
+  color: $blanco;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 18px;
+  line-height: 1;
+  border: 1px solid $color-primario;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: transparent;
+  color: $color-primario;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 18px;
+  line-height: 1;
 }
 
 //encabezados
@@ -83,38 +114,11 @@ li {
   max-width: 150px;
 }
 
-// gran contenedor
-.gran-contenedor {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-.gran-contenedor::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 1;
-  background-color: #020101;
-  opacity: 0.1;
-  overflow: hidden;
-}
-
-.gran-contenedor--flex {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-}
-
-button:hover {
-  background: transparent;
-  color: #ca7807;
+//destacado
+.negrita {
+  font-weight: 900;
+  font-size: inherit;
+  color: $color-primario;
 }
 
 //fondos
@@ -129,27 +133,6 @@ button:hover {
   margin: 0 auto;
 }
 
-//contenedor-800
-.contenedor-800 {
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.contenedor-cflex {
-  height: inherit;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-  text-align: center;
-}
-
 //migas de pan
 .breadcrumb a {
   color: $blanco;
@@ -157,214 +140,8 @@ button:hover {
 .breadcrumb a:hover {
   color: $color-primario;
 }
-li.breadcrumb-item.active  {
+li.breadcrumb-item.active {
   color: $blanco;
-}
-
-//contenedor comunidad
-
-#fondo-comunidad {
-  padding: 90px 0;
-  position: relative;
-}
-
-#fondo-comunidad:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-
-  background-image: url(../img/camino-al-paraje.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.contenedor-fondo {
-  max-width: 1200px;
-  margin: auto;
-  position: relative;
-}
-.grilla-fondo {
-  display: grid;
-  grid-column-gap: 55px;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 2fr 3fr;
-  grid-template-areas: "imagenSanJuan txtComunidad";
-}
-
-@media screen and (max-width: 1200px) {
-  .grilla-fondo {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "imagenSanJuan"
-      "txtComunidad";
-  }
-  #fondo-comunidad {
-    padding: 65px 0;
-  }
-}
-
-.carouselArtesanos {
-  grid-area: imagenSanJuan;
-}
-
-.conImgArtesanos img {
-  box-shadow: 7px 7px 14px rgba(5, 5, 5, 0.7);
-  border-radius: 7px;
-  padding: 0 40px;
-}
-
-.carousel-item .active {
-  padding: 25px;
-}
-
-.txt-comunidad {
-  grid-area: txtComunidad;
-  padding: 50px;
-}
-
-.conImgArtesanos img {
-  box-shadow: 7px 7px 14px rgba(5, 5, 5, 0.7);
-  border-radius: 7px;
-}
-
-// contenedor seccion ods
-
-.contenedor-grid {
-  max-width: 800px;
-  margin: auto;
-}
-
-.grid-ods {
-  display: grid;
-  grid-column-gap: 15px;
-  grid-row-gap: 10px;
-  grid-template-areas:
-    "intro intro intro"
-    "tarjetaUno tarjetaDos tarjetaTres";
-}
-
-@media screen and (max-width: 750px) {
-  .grid-ods {
-    grid-template-areas:
-      "intro"
-      "tarjetaUno"
-      "tarjetaDos"
-      "tarjetaTres";
-  }
-}
-
-.grid-ods > div {
-  text-align: center;
-  padding: 25px;
-}
-
-.grid-ods > div img {
-  max-width: 150px;
-  height: auto;
-  display: block;
-  margin: auto;
-}
-
-.intro {
-  grid-area: intro;
-}
-
-.tarjetaUno {
-  grid-area: tarjetaUno;
-}
-
-.tarjetaDos {
-  grid-area: tarjetaDos;
-}
-
-.tarjetaTres {
-  grid-area: tarjetaTres;
-}
-
-.espacioSuperior {
-  padding: 20px 0;
-}
-
-.tarjetas {
-  box-shadow: 0 4px 8px 0 rgba(99, 80, 80, 0.2);
-
-  transition: all 0.2s;
-  margin: 20px;
-  border-radius: 10px;
-}
-
-.tarjetas:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-
-  transform: translateY(-10px);
-}
-
-.tarjetas p {
-  margin-top: 25px;
-  font-size: 75%;
-}
-
-//Prensa
-.fondoPrensa {
-  background-image: url(../img/goma-sanjuan.jpg);
-  height: 80vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.contenedorPrensa {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  position: absolute;
-  max-width: 600px;
-  padding-right: 25px;
-  padding-left: 25px;
-}
-
-.imgPrensa {
-  max-width: 65%;
-  padding-bottom: 30px;
-  display: inline-flex;
-  margin: auto;
-}
-
-#carouselPrensa.carousel-item {
-  padding: 0 20px;
-  text-align: center;
-  color: white;
-}
-
-#carouselPrensa.carousel-item img {
-  max-width: 400px;
-  text-align: center;
-  margin: 0 auto 30px auto;
-}
-
-#carouselPrensa .carousel-item p {
-  padding-bottom: 50px;
-  font-size: 1.15rem;
-  line-height: 1.8;
-  text-align: center;
-}
-
-.carousel-indicators--prensa {
-  bottom: -25px;
-}
-
-.pointer {
-  cursor: pointer;
 }
 
 //fondos header
@@ -374,15 +151,18 @@ li.breadcrumb-item.active  {
   padding-bottom: 400px;
 }
 .fondo-recorrido {
-  background-image: url("../img/recorrido.jpg");
+  background: url("../img/recorrido.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .fondo-contacto {
-  background-image: url("../img/contacto.jpg");
+  background: url("../img/contacto.jpg") no-repeat center top;
+  background-size: cover;
 }
 
 .fondo-campania {
-  background-image: url("../img/campania.jpg");
+  background: url("../img/campania.jpg") no-repeat;
+  background-size: cover;
 }
 
 .fondo-comunidad {
@@ -403,3 +183,4 @@ p.modalArtesanos {
   text-align: center;
   cursor: pointer;
 }
+

@@ -30,7 +30,6 @@
     color: white;
 }
 
-
 .form-items {
     display: flex;
 }
@@ -67,12 +66,7 @@
 
 //formulario de pagina de contacto
 
-#pagina-contacto {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    position: relative;
-}
+
 .img-contacto__img {
     height: auto;
     max-width: 100%;
@@ -109,7 +103,7 @@
 }
 
 .form-pagContacto__submit {
-    background-color: #ca7807;
+    background-color: $color-primario;
     color: $blanco;
     border-radius: 30px;
     font-weight: bold;
@@ -120,30 +114,6 @@
     border: none;
 }
 
-.boton {
-    background-color: $color-primario;
-    color: $blanco;
-    border-radius: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 12px 18px;
-    line-height: 1;
-    border: 1px solid $color-primario;
-    cursor: pointer;
-}
-
-.boton:hover {
-    background-color: transparent;
-    color: $color-primario;
-    border-radius: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 12px 18px;
-    line-height: 1;
-    
-}
 .boton--formulario-header {
     background-color: transparent;
     color: $blanco;
@@ -169,25 +139,20 @@
 }
 
 .boton--menu {
- 
     padding: 12px 18px;
-  
 }
 
 .boton--menu:hover {
     border: solid 1px $color-encabezado;
 
     color: $blanco;
-    opacity: .7;
-
+    opacity: 0.7;
 }
-
-  
-
 
 @media screen and (max-width: 992px) {
     .img-contacto__img {
         max-width: none;
+        transform: translate(-25%, 0%);
     }
 
     .form-pagContacto {
