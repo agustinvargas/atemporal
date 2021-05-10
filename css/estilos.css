@@ -619,6 +619,15 @@ p.modalArtesanos {
   font-size: 1.2rem;
 }
 
+@media screen and (max-width: 720px) {
+  .contenedor-2__p--grande {
+    text-align: left;
+  }
+  .contenedor-2__h2 {
+    text-align: left;
+  }
+}
+
 .flex-column--center {
   justify-content: center;
   text-align: center;
