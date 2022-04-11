@@ -6,7 +6,7 @@ Website made for the CoderHouse Web Development course. Technologies used: HTML5
 
 ## Screenshots
 
-![criticar](https://res.cloudinary.com/dp2no7dm6/image/upload/v1649712859/atemporal/Atemporal_Coop__AdobeCreativeCloudExpress_1_jk7jfb.gif)
+![criticar](https://res.cloudinary.com/dp2no7dm6/image/upload/v1649714866/atemporal/Atemporal_Coop_1_s6tlbf.gif)
 
 ## Author
 
